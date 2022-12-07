@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                    <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of data">
+                        <div class="card" >
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfay3kSHilNW9mRmBechJ2OlTsNBU0gt9eVg&usqp=CAU" height="200" width="200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.name}}</h5>
+                              <p class="card-text">Health History : {{i.healthHistory}}</p>
+                              <p class="card-text">Diagnosed by dr : {{i.doctor}}</p>
+        
+                            </div>
+                          </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
