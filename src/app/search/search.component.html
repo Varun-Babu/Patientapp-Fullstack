@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <br>
+            <div class="card" >
+                <div class="card-body">
+                    <br>
+                  <h5 class="card-title">SEARCH EMPLOYEE</h5>
+                  <div class="row g-3">
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Patient ID</label>
+                        <input name="empId" [(ngModel)] = "id"  type="text" class="form-control">
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <button  (click)="readValue()" class="btn btn-outline-dark">Search</button>
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+         </div>
+    </div>
+    <div class="row g-3" *ngFor="let j of searchData ">
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Name</label>
+            <input value="{{j.name}}" type="text" class="form-control">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Health History</label>
+            <input value="{{j.healthHistory}}"   type="text" class="form-control">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Doctor</label>
+            <input value="{{j.doctor}}"  type="text" class="form-control">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button (click)="deleteBtnClick(j.id)"  class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>
